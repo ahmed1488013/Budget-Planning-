@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack Budget Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FinTrack Budget Planner</h1>
+        </header>
+        <main>
+            <section class="budget-categories">
+                <h2>Budget Overview</h2>
+                <div class="category-list">
+                    <div class="category-item" data-category="Food">
+                        <h3>Food</h3>
+                        <div class="progress-bar" id="food-bar"></div>
+                        <button class="add-expense-btn" onclick="showExpenseForm('Food')">Add Expense</button>
+                    </div>
+                    <div class="category-item" data-category="Rent">
+                        <h3>Rent</h3>
+                        <div class="progress-bar" id="rent-bar"></div>
+                        <button class="add-expense-btn" onclick="showExpenseForm('Rent')">Add Expense</button>
+                    </div>
+                    <div class="category-item" data-category="Entertainment">
+                        <h3>Entertainment</h3>
+                        <div class="progress-bar" id="entertainment-bar"></div>
+                        <button class="add-expense-btn" onclick="showExpenseForm('Entertainment')">Add Expense</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="expense-form" id="expense-form">
+            <h3>Add Expense</h3>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+            <button onclick="addExpense()">Submit</button>
+            <button onclick="closeExpenseForm()">Cancel</button>
+        </div>
+        <footer>
+            <p>FinTrack © 2024</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
